@@ -190,48 +190,6 @@ export default function Notes() {
 
         </Section>
 
-        {/* ================= GIT & GITHUB ================= */}
-        <Section title="Git & GitHub">
-
-          <Doc title="Git Basics">
-            <CodeBlock>
-{`git init
-git add .
-git commit -m "Initial commit"`}
-            </CodeBlock>
-          </Doc>
-
-          <Doc title="GitHub Workflow">
-            <CodeBlock>
-{`git remote add origin https://github.com/username/repo.git
-git push -u origin main`}
-            </CodeBlock>
-          </Doc>
-
-        </Section>
-
-        {/* ================= DEPLOYMENT ================= */}
-        <Section title="Deployment">
-
-          <Doc title="Frontend Deployment">
-            <ul>
-              <li>Vercel, Netlify</li>
-              <li>GitHub integration</li>
-            </ul>
-            <CodeBlock>
-{`npm run build`}
-            </CodeBlock>
-          </Doc>
-
-          <Doc title="Backend Deployment">
-            <ul>
-              <li>Render, Railway, VPS</li>
-              <li>Environment variables</li>
-            </ul>
-          </Doc>
-
-        </Section>
-
       </div>
     </section>
   );
