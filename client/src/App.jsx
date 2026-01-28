@@ -16,7 +16,7 @@ import Admin from "./pages/admin";
 import CourseDetails from "./pages/CourseDetails";
 import LearnCourse from "./pages/LearnCourse";
 import Checkout from "./pages/Checkout";
-import Notes from "./pages/notes";
+import Notes from "./pages/Notes";
 import OAuthSuccess from "./pages/OAuthSuccess";
 import StudentDashboard from "./pages/StudentDashboard";
 
@@ -56,15 +56,15 @@ function App() {
               <Route path="/pricing" element={<Pricing />} />
 
               <Route
-  path="/instructor"
-  element={
-    <ProtectedRoute roles={["instructor", "admin"]}>
-      <InstructorDashboard />
-    </ProtectedRoute>
-  }
-/>
+                path="/instructor"
+                element={
+                  <ProtectedRoute roles={["instructor", "admin"]}>
+                    <InstructorDashboard />
+                  </ProtectedRoute>
+                }
+              />
 
-<Route path="/dashboard" element={<StudentDashboard />} />
+              <Route path="/dashboard" element={<StudentDashboard />} />
 
 
 
@@ -84,24 +84,24 @@ function App() {
 
 
               <Route
-  path="/checkout/course/:id"
-  element={
-    <ProtectedRoute roles={["student", "instructor", "admin"]}>
-      <Checkout />
-    </ProtectedRoute>
-  }
-/>
+                path="/checkout/course/:id"
+                element={
+                  <ProtectedRoute roles={["student", "instructor", "admin"]}>
+                    <Checkout />
+                  </ProtectedRoute>
+                }
+              />
 
-<Route
-  path="/checkout/plan/:plan"
-  element={
-    <ProtectedRoute roles={["student", "instructor", "admin"]}>
-      <Checkout />
-    </ProtectedRoute>
-  }
-/>
+              <Route
+                path="/checkout/plan/:plan"
+                element={
+                  <ProtectedRoute roles={["student", "instructor", "admin"]}>
+                    <Checkout />
+                  </ProtectedRoute>
+                }
+              />
 
-<Route path="/oauth-success" element={<OAuthSuccess />} />
+              <Route path="/oauth-success" element={<OAuthSuccess />} />
 
 
             </Routes>
