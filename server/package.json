@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
+
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "prisma generate && prisma migrate deploy",
+    "postinstall": "prisma generate"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+
   "dependencies": {
     "@prisma/client": "^4.16.2",
     "bcryptjs": "^3.0.3",
@@ -21,10 +27,11 @@
     "passport": "^0.7.0",
     "passport-github2": "^0.1.12",
     "passport-google-oauth20": "^2.0.0",
-    "prisma": "^4.16.2",
     "razorpay": "^2.9.6"
   },
+
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "prisma": "^4.16.2"
   }
 }
